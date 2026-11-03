@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Quiz Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+            <li><a href="#quiz" onclick="showSection('quiz')">Quiz</a></li>
+            <li><a href="#more" onclick="showSection('more')">More Quizzes</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="section">
+        <h1> <span>Welcome</span> <br> To the Advanced Quiz Web App</h1>
+        <p>Test your knowledge with our exciting quizzes!</p>
+    </section>
+    
+    <section id="about" class="section hidden">
+        <h1>About This App</h1>
+        <p>This quiz app is designed to challenge your knowledge in various topics with a user-friendly interface and interactive design.</p>
+    </section>
+    
+    <section id="quiz" class="section hidden">
+        <div class="container">
+            <h1>Take a Quiz</h1>
+            <div id="quiz-selection">
+                <h2>Select a Quiz</h2>
+                <button class="quiz-btn" onclick="startQuiz('js')">JavaScript Basics</button>
+                <button class="quiz-btn" onclick="startQuiz('html')">HTML & CSS</button>
+                <button class="quiz-btn" onclick="startQuiz('react')">React Fundamentals</button>
+                <button class="quiz-btn" onclick="startQuiz('python')">Python Programming</button>
+                <button class="quiz-btn" onclick="startQuiz('data')">Data Structures</button>
+                <button class="quiz-btn" onclick="startQuiz('ai')">Artificial Intelligence</button>
+            </div>
+            <div id="quiz-container" class="hidden">
+                <h2 id="question"></h2>
+                <div id="options" class="options-grid"></div>
+                <button id="next-btn" class="hidden" onclick="nextQuestion()">Next</button>
+            </div>
+            <div id="result" class="hidden">
+                <h2>Quiz Completed!</h2>
+                <p id="score"></p>
+                <button onclick="restartQuiz()">Take Another Quiz</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="more" class="section hidden">
+        <h1>More Quizzes Coming Soon!</h1>
+        <p>Stay tuned for more exciting and challenging quizzes.</p>
+    </section>
+    
+    <footer>
+        <p>Designed by <strong>Saadhasmi</strong> | © 2025</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
